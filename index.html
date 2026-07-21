@@ -9,6 +9,25 @@
   <!-- Favicon Icon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'><path d='M12 3v18M6 7v10M18 7v10M3 10v4M21 10v4' stroke='%2338bdf8' stroke-width='2.5' stroke-linecap='round'/></svg>">
 
+  <!-- JSON-LD STRUCTURED DATA SCHEMA FOR GOOGLE SEARCH -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AudioPipe",
+    "url": "https://audiopipes.com",
+    "description": "Free, private in-browser audio converter and trimmer powered by WebAssembly. Convert WAV, M4A, AAC, and MP4 to MP3 directly in your browser with zero server uploads.",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript and HTML5 WebAssembly support",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
   <!-- FFmpeg.wasm WebAssembly Libraries -->
   <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
 
