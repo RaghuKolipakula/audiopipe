@@ -44,8 +44,6 @@
   <!-- FFmpeg.wasm WebAssembly Libraries -->
   <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
 
-  <!-- GOOGLE ADSENSE MONETIZATION SCRIPT -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5197654798298236" crossorigin="anonymous"></script>
 
   <style>
     * { box-sizing: border-box; }
@@ -133,30 +131,33 @@
   <!-- Download Container -->
   <div id="downloadContainer" style="margin-top: 1rem;"></div>
 
-  <!-- Auto Ads Placement Area -->
-  <div class="ad-zone" id="adZone">
-    <span>SPONSORED CONTENT</span>
-  </div>
 </div>
 
 <!-- TEXT CONTENT AREA (Prevents "Low Value Content" AdSense Rejection) -->
 <section class="seo-section">
   <h2>Fast, Private, Client-Side Audio Conversion</h2>
-  <p>AudioPipe is an in-browser audio converter and editor powered by WebAssembly (FFmpeg.wasm). Convert WAV, AAC, M4A, OGG, and MP4 video clips into clean MP3 audio files directly on your computer or phone without uploading your private media files to external cloud servers.</p>
+  <p>AudioPipe is an in-browser audio converter and editor powered by WebAssembly (FFmpeg.wasm). Convert WAV, AAC, M4A, OGG, and MP4 video clips into clean MP3 audio files directly on your computer or phone without uploading your private media files to external cloud servers. The entire conversion process occurs within the security sandbox of your browser, utilizing your local CPU.</p>
+
+  <p>Traditional audio converters require you to upload your files to their servers. This not only consumes your internet bandwidth and time, but it also raises significant privacy concerns. You have no control over how long your files are stored, who has access to them, or if they are being analyzed. AudioPipe eliminates these risks entirely by bringing the conversion engine to you. Because there are no uploads, there are no file size limits imposed by server constraints, and there are no processing queues to wait in.</p>
+  
+  <h3>The Power of WebAssembly</h3>
+  <p>AudioPipe leverages WebAssembly (Wasm) to run FFmpeg, the industry-standard multimedia framework, directly inside your web browser. In the past, browsers were limited to JavaScript, which lacks the performance necessary for intensive tasks like audio encoding. WebAssembly allows us to compile C and C++ code (like FFmpeg) so it runs at near-native speeds on the web. This means you get desktop-class performance without needing to install any software or plugins.</p>
 
   <h3>Why Use AudioPipe?</h3>
   <ul>
-    <li><strong>100% Client-Side Privacy:</strong> Audio files are processed locally on your device's CPU. Your media never leaves your browser.</li>
-    <li><strong>No File Size Restrictions:</strong> Process full-length podcasts, studio recordings, and video clips without running into 25MB file limits.</li>
-    <li><strong>Precision Trimming:</strong> Extract exact audio segments, intros, or sound bites by setting start and end timestamps.</li>
+    <li><strong>100% Client-Side Privacy:</strong> Audio files are processed locally on your device's CPU. Your media never leaves your browser. This is essential for journalists, musicians, and anyone handling sensitive or unreleased audio files.</li>
+    <li><strong>No File Size Restrictions:</strong> Process full-length podcasts, hours of studio recordings, and large video clips without running into the typical 25MB or 50MB file limits imposed by cloud-based tools. The only limit is your device's local memory.</li>
+    <li><strong>Zero Upload Time:</strong> Because files aren't uploaded to a server, the process begins instantly. You are only limited by the speed of your device's processor, not your internet connection.</li>
+    <li><strong>Precision Trimming:</strong> Extract exact audio segments, intros, or sound bites by setting start and end timestamps. You can trim a 2-hour podcast down to a 30-second clip directly in the browser before exporting it.</li>
+    <li><strong>Multiple Formats:</strong> Convert freely between the most common audio formats. Need a small file for easy sharing? Choose MP3. Need an uncompressed file for professional editing? Choose WAV. Need high quality in the Apple ecosystem? Choose M4A or AAC.</li>
   </ul>
 
   <h3>How to Convert Audio Files</h3>
   <ol>
-    <li>Select any audio or video file from your computer or smartphone.</li>
-    <li>Choose your target audio format (MP3, WAV, AAC, M4A).</li>
-    <li>Optionally enter start and end timestamps to trim the audio.</li>
-    <li>Click "Convert & Process Audio" to generate your instant download link.</li>
+    <li>Select any audio or video file from your computer or smartphone by clicking the dropzone.</li>
+    <li>Choose your target audio format (MP3, WAV, AAC, M4A) based on your needs.</li>
+    <li>Optionally enter start and end timestamps to trim the audio. For example, enter 00:01:00 to 00:02:30 to extract exactly 90 seconds of audio.</li>
+    <li>Click "Convert & Process Audio". The WebAssembly engine will process the file and immediately generate a secure, instant download link right here on the page.</li>
   </ol>
 </section>
 
@@ -164,6 +165,7 @@
 <footer>
   <p>&copy; 2026 AudioPipe — Private WebAssembly Audio Utilities.</p>
   <p>
+    <a href="/docs/index.html">Documentation & Blog</a> | 
     <a onclick="openModal('privacyModal')">Privacy Policy</a> | 
     <a onclick="openModal('termsModal')">Terms of Service</a>
   </p>
